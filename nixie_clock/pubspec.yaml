@@ -1,0 +1,31 @@
+name: nixie_clock
+description: An old fashion clock using nixie tubes.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_clock_helper:
+    path: ../flutter_clock_helper
+
+  cupertino_icons: ^0.1.2
+
+  flare_flutter: ^2.0.1
+
+  google_fonts: ^0.3.3
+
+  font_awesome_flutter: ^8.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/tube.flr
+    - assets/box.flr
+    - assets/dots.flr
