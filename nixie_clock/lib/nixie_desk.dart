@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'components.dart';
 import 'settings.dart';
@@ -128,100 +126,5 @@ class _NixieDeskState extends State<NixieDesk> {
         ),
       );
     });
-  }
-}
-
-class WeatherIcon extends StatelessWidget {
-  const WeatherIcon(this.weatherCondition, this.size, this.width, this.height,
-      {Key key})
-      : super(key: key);
-
-  final String weatherCondition;
-  final double size, width, height;
-
-  @override
-  Widget build(BuildContext context) {
-    /*
-      cloudy,
-  foggy,
-  rainy,
-  snowy,
-  sunny,
-  thunderstorm,
-  windy,
-  */
-    IconData icon;
-    switch (weatherCondition) {
-      case 'sunny':
-        icon = FontAwesomeIcons.sun;
-        break;
-      case 'foggy':
-        icon = FontAwesomeIcons.smog;
-        break;
-      case 'rainy':
-        icon = FontAwesomeIcons.cloudRain;
-        break;
-      case 'snowy':
-        icon = FontAwesomeIcons.snowflake;
-        break;
-      case 'thunderstorm':
-        icon = FontAwesomeIcons.bolt;
-        break;
-      case 'windy':
-        icon = FontAwesomeIcons.wind;
-        break;
-      case 'cloudy':
-        icon = FontAwesomeIcons.cloud;
-        break;
-      default:
-        {
-          return NeonText(weatherCondition, size);
-        }
-    }
-
-    return Container(
-      height: height,
-      width: width,
-      child: Stack(
-        children: <Widget>[
-          Positioned(
-            left: 1.0,
-            top: 2.0,
-            child: Icon(icon, color: const Color(0xFFFF8142), size: size),
-          ),
-          Icon(icon, color: const Color(0xFFFFBE50), size: size),
-        ],
-      ),
-    );
-  }
-}
-
-class NeonText extends StatelessWidget {
-  const NeonText(this.text, this.size, {Key key}) : super(key: key);
-
-  final String text;
-  final double size;
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(text,
-        textAlign: TextAlign.center,
-        maxLines: 1,
-        overflow: TextOverflow.fade,
-        // or styly
-        // or parisianne
-        style: GoogleFonts.yellowtail(
-          textStyle: TextStyle(
-            fontSize: size,
-            color: const Color(0xFFFFBE50),
-            shadows: [
-              Shadow(
-                blurRadius: 5.0,
-                color: const Color(0xFFFF8142),
-                offset: const Offset(5.0, 2.0),
-              ),
-            ],
-          ),
-        ));
   }
 }
