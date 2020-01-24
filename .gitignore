@@ -18,7 +18,7 @@
 # The .vscode folder contains launch configuration and tasks you configure in
 # VS Code which you may wish to be included in version control, so this line
 # is commented out by default.
-#.vscode/
+.vscode/
 
 # Flutter/Dart/Pub related
 **/doc/api/
@@ -36,6 +36,7 @@ lib/generated_plugin_registrant.dart
 **/.dart_tool
 **/.pubspec.lock
 **/.flutter-plugins
+**/.flutter-plugins-dependencies
 **/.packages
 **/.pub-cache/
 **/.pub/
@@ -43,6 +44,7 @@ lib/generated_plugin_registrant.dart
 
 # Remove pubspec.lock for libraries
 flutter_clock_helper/pubspec.lock
+**/pubspec.lock
 
 # Other items grabbed from flutter/flutter repo
 flutter_*.png
@@ -51,6 +53,7 @@ unlinked.ds
 unlinked_spec.ds
 
 # Android related
+**/android/
 **/android/**/gradle-wrapper.jar
 **/android/.gradle
 **/android/captures/
@@ -62,6 +65,7 @@ unlinked_spec.ds
 *.jks
 
 # iOS/XCode related
+**/ios/
 **/ios/**/*.mode1v3
 **/ios/**/*.mode2v3
 **/ios/**/*.moved-aside
