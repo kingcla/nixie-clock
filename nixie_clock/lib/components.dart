@@ -249,6 +249,7 @@ class NeonText extends StatelessWidget {
         style: GoogleFonts.yellowtail(
           textStyle: TextStyle(
             fontSize: size,
+            fontWeight: FontWeight.w400, // Regular
             color: FRONT_COLOR,
             shadows: [
               Shadow(
